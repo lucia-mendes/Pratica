@@ -1,0 +1,393 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+body{
+    background-color: #fce1ef;
+}
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 4%;
+    
+   
+}
+/* estilo do header*/
+header{
+    width: 100%;
+    padding: 5px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: .5s;
+}
+header .interface{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo img{
+   max-width: 45%;
+}
+
+/*Estilo do menu dinamico que aparece e desaparece*/
+header.rolar{
+   background-color: #fff;
+   padding: 2px 0;
+   box-shadow: 0 0 8px #00000061;
+}
+
+header.rolar .btn-cadastro button{
+   border: 1px solid #000;
+   color: #000;
+   width: 140px;
+}
+header.rolar .btn-cadastro button:hover{
+   background-color: black;
+   color: #fff;
+
+}
+header.rolar .btn-login button{
+   border: 1px solid #000;
+   color: #000;
+}
+header.rolar .btn-login button:hover{
+   background-color: black;
+   color: #fff;
+   
+}
+
+header .menu-desktop nav ul{
+   list-style-type: none;
+}
+header .menu-desktop nav ul li{
+    display: inline-block;
+    margin: 0 35px;
+}
+header .menu-desktop nav ul li a{
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+    font-size: 15px;
+    
+}
+header .menu-desktop nav ul li a:hover{
+    transform: scale(1.05);
+}
+
+header .btn-login button{
+    width: 80px;
+    height: 50px;
+    font-size: 15px;
+    background-color: transparent;
+    border: 1px solid white;
+    cursor: pointer;
+    transition: .5s;
+}
+header .btn-login button:hover{
+    background-color: #fff;
+    color: black;
+    
+}
+
+ header .btn-cadastro button{
+    width: 90px;
+    height: 50px;
+    font-size: 15px;
+    background-color: transparent;
+    border: 1px solid white;
+    cursor: pointer;
+    padding: 1% 0;
+    transition: .5s;
+ }
+ header .btn-cadastro button:hover{
+    background-color: #fff;
+    color: black;
+    
+ }
+ /*Estilo do botão do menu mobile*/
+ header .btn-menu-mob{
+  display: none;
+  position: relative;
+  z-index: 999999999999999999999;
+ }
+ header .btn-menu-mob div{
+    background-color: #fff;
+    height: 3px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: .2s;
+   
+ }
+ header .btn-menu-mob .line-menumob-1{
+   width: 30px;
+ }
+ header .btn-menu-mob .line-menumob-2{
+  width: 20px;
+}
+header.rolar .btn-menu-mob div{
+  background-color: #000;
+}
+header .btn-menu-mob .line-menumob-1.ativo1{
+  transform: rotate(45deg) translate(30%);
+  background-color: #fff;
+
+}
+header .btn-menu-mob .line-menumob-2.ativo2{
+  transform: rotate(-45deg) translate(30%);
+  width: 30px;
+  background-color: #fff;
+}
+ /* Estilo do menu mobile*/
+ header .menu-mobile{
+  width: 0;
+  height: 0;
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  right: 0;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  transition: .2s;
+ }
+ header .menu-mobile nav{
+  width: 100%;
+ }
+ header .menu-mobile nav ul{
+  list-style-type: none;
+ }
+ header .menu-mobile nav a{
+  font-size: 24px;
+  text-decoration: none;
+  color: #fff;
+  padding: 15px 0;
+  display: block;
+  transition: .5s;
+ }
+ header .menu-mobile nav a:hover{
+  background-color: #fff;
+  color: #000;
+  box-shadow: 0 0 20px #fff;
+ }
+ header .menu-mobile.abrir{
+  width: 100%;
+  height: 100vh;
+ }
+ 
+ body.no-overflow{
+  overflow: hidden;
+ }
+
+ /* Estilo do hero*/
+  section.hero-site{
+    height: 97vh;
+    background-image: url(secretaria.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+  }
+  .hero-site .interface{
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+ .hero-site .texto-hero h1{
+    font-size: 2em;
+    line-height: 45px;
+    font-weight: 200;
+ }
+ .hero-site .texto-hero h1 span{
+    display: block;
+    font-weight: 600;
+   
+ }
+ .hero-site .texto-hero p{
+    font-size: 20px;
+    font-weight: 300;
+    margin: 10px 0;
+ }
+ /* Estilo-sobre*/
+ section.sobre{
+    padding: 80px 0;
+    box-shadow: 0 0 40px 10px #fdfdfd;
+
+ }
+ .sobre .itens-sobre{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10%;
+    margin-bottom: 70px;
+    margin: 100px 50px;
+ }
+ .sobre .itens-sobre .img-itens img{
+    max-width: 500px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.7);
+    border-radius: 20px;
+ }
+ .sobre .itens-sobre .texto-itens h3{
+     font-size: 3em;
+     line-height: 50px;
+     margin-bottom: 20px;
+ }
+ .itens-sobre .texto-itens h3 span{
+     font-weight: 200;
+ }
+ /* Estilo cursos*/
+ section.cursos{
+   margin: 25px;
+   
+ }
+
+ .container {
+   display: flex;
+   gap: 20px;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   padding: 4% 4%; 
+   width: 100%;
+  
+ }
+
+ /*tirando a decoração dos links dos cards*/
+
+.linha{
+  text-decoration: none;
+}
+ 
+ .card {
+   background-color: #fff;
+   border-radius: 10px;
+   overflow: hidden;
+   width: 300px;
+   height: 400px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   text-align: center;
+ }
+ 
+ .card img {
+   width: 100%;
+   height: 60%;
+   object-fit: cover;
+ }
+ .card h3{
+     margin: 10px 0;
+     font-size: 20px;
+     color: #333;
+ }
+ 
+ .card p {
+   padding: 10px;
+   font-size: 16px;
+   color: #333;
+   height: 30%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ }
+   h2.titulo{
+      padding: 30px;
+      font-size: 50px;
+      display: flex;
+      justify-content: center;
+      text-shadow: 3px 3px 3px;
+      font-weight: 600;
+   }
+    
+
+ /* Estilo dos botões de contacto*/
+ section.contato{
+   box-shadow: 0 0 40px 10px #fdfdfd;
+   background-color:#f8dfed;
+   padding: 80px 0;
+  
+
+ }
+ .texto-contato, .icons-contato{
+   display: inline-block;
+   width: 50%;
+   margin-right:-4px ;
+   vertical-align: middle;
+
+ }
+ .contato .texto-contato h3{
+   font-size: 2.5em;
+   line-height: 50px;
+   margin-bottom: 20px;
+   
+   
+ }
+ .contato .texto-contato h3 span{
+   font-weight: 300;
+ }
+ .contato .icons-contato a{
+   text-decoration: none;
+ }
+ .contato .icons-contato button{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   width: 60%;
+   height: 60px;
+   margin: 0 auto 20px auto;
+   padding: 0 60px;
+   background-color: white;
+   border: 2px solid black;
+   cursor: pointer;
+   transition: .5s;
+ }
+ .contato .icons-contato button i{
+   font-size: 20px;
+
+ }
+ .contato .icons-contato button:hover{
+   background-color: black;
+ }
+ .contato .icons-contato button:hover i, .contato .icons-contato button:hover p{
+   color: #fff;
+ }
+
+ /* estilo footer*/
+ footer{
+   background-color: black;
+   width: 100%;
+   text-align: center;
+   padding: 30px 0;
+ }
+ footer .top-footer button{
+     width: 40px;
+     height: 40px;
+     border-radius: 50%;
+     border: 2px solid #fff;
+     background-color: transparent;
+     color: #fff;
+     font-size: 24pxpx;
+     cursor: pointer;
+     margin: 0 10px;
+     transition: .5s;
+ }
+ footer .top-footer button:hover{
+   background-color: #fff;
+   color: black;
+ }
+ footer .bottom-footer p{
+   color: #fff;
+   margin-top: 10px;
+ }
+ footer .bottom-footer{
+   border-top: 2px solid #fff;
+   margin-top: 10px;
+ }

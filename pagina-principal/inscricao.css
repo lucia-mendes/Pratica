@@ -1,0 +1,186 @@
+/* Definição das cores */
+:root {
+    --cor001: #333;
+    --cor002: #fff;
+    --cor003: #ddd;
+    --cor004: #00000080;
+    --cor006: #00000033;
+    --cor007: #eee;
+    --cor008: #ff445c;
+    --cor009: #ff4b2b;
+    --cor010: #ff416c;
+}
+
+/* Configurações Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilização geral do corpo */
+body {
+    background-color: var(--cor007);
+    color: var(--cor001);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Contêiner principal */
+.container {
+    width: 90%;
+    max-width: 900px;
+    background-color: var(--cor002);
+    padding: 20px;
+    box-shadow: 0px 4px 8px var(--cor006);
+    border-radius: 10px;
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.ficha{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    line-height: 80px;
+}
+
+.logotipo {
+    display: flex;
+    text-align: center;
+}
+
+.img{
+    display: block;
+    margin: auto;
+}
+
+/* Estilização do formulário superior */
+.form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.form-header .info {
+    width: 48%;
+}
+
+.form-header .foto-container {
+    width: 48%;
+    text-align: center;
+    border: 2px dashed var(--cor008);
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#preview {
+    max-width: 100px;
+    height: 100px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+/* Labels e inputs */
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="tel"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid var(--cor003);
+    border-radius: 5px;
+    background-color: var(--cor002);
+}
+
+/* Campos do formulário */
+fieldset {
+    border: 1px solid var(--cor003);
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+legend {
+    font-weight: bold;
+    font-size: 16px;
+    color: var(--cor008);
+}
+
+/* Botão de envio com degradê */
+button {
+    background: linear-gradient(45deg, var(--cor009), var(--cor010), var(--cor008));
+    color: var(--cor002);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+}
+
+button:hover {
+    filter: brightness(1.1);
+}
+
+/* Checkboxes */
+input[type="checkbox"] {
+    margin-left: 5px;
+}
+
+/* RESPONSIVIDADE PARA TELAS PEQUENAS (ATÉ 300PX) */
+@media (max-width: 300px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .form-header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-header .info,
+    .form-header .foto-container {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .foto-container {
+        padding: 5px;
+    }
+
+    #preview {
+        max-width: 80px;
+        height: 80px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}

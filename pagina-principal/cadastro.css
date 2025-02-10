@@ -1,0 +1,290 @@
+/*Importação de fonte externa*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat");
+
+:root{
+    --cor001: #333;
+    --cor002: #fff;
+    --cor003: #ddd;
+    --cor004: #00000080;
+    --cor006: #00000033;
+    --cor007: #eee;
+    --cor008: #ff445c;
+    --cor009: #ff4b2b;
+    --cor010: #ff416c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #dfe9f3, var(--cor002));
+}
+
+h2{
+    font-size: 30px;
+}
+
+.primeiro{
+    padding: 40px 80px;
+}
+
+/* Container principal */
+.container {
+    display: flex;
+    width: 93%;
+    height: 88%;
+    background: var(--cor002);
+    box-shadow: 0 14px 28px var(--cor004),
+    0 10px 10px var(--cor006);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    font-family: "Montserrat" , sans-serif;
+    line-height: 26px;
+}
+
+/* Painel colorido */
+.painel {
+    width: 50%;
+    background: linear-gradient(to right, var(--cor009), var(--cor010));
+    color: var(--cor002);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    position: absolute;
+    height: 100%;
+    transition: all 0.5s ease-in-out;
+    left: 0;
+    line-height: 1.5;
+}
+
+.painel-direito {
+    position: absolute;
+    right: 0;
+    transition: opacity 0.5s ease-in-out;
+    display: none;
+}
+
+.mensagem {
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+/* Formulário */
+.formulario {
+    width: 50%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    left: 50%;
+    height: 100%;
+    transition: all 0.5s ease-in-out;
+    padding: 40px 40px;
+}
+
+/* Estilização do formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    flex-direction: column;
+    align-items: center; /* Centraliza os elementos dentro do formulário */
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto; /* Centraliza o formulário na tela */
+    padding: 20px;
+}
+
+/*Esstilo para as redes sociais no formulário*/
+.RedesSociais{
+    margin: 20px 0;
+}
+
+.RedesSociais a{
+    list-style-type: none; /*para tirar o simbolo das listas*/
+    height: 40px;
+    width: 40px;
+    border: 1px solid var(--cor003); 
+    border-radius: 50%;
+    display: inline-flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+}
+
+input {
+    padding: 10px 30px 10px 30px;
+    border: 1px solid var(--cor007);
+    border-radius: 5px;
+    width: 80%;
+    background: var(--cor007); /*cinza claro*/
+    margin: 8px 0;
+    justify-content: center;
+    border: 1px solid #ccc;
+}
+
+.formulario button:hover {
+    background: linear-gradient(to left, var(--cor009),var(--cor008), var(--cor010));
+}
+
+button {
+    color: var(--cor002);
+    width: 50%;
+    max-width: 300px;
+    border-radius: 21px;
+    cursor: pointer; 
+    margin-top: 10px;
+    background: var(--cor008);
+    color: var(--cor002);
+    border: 1px solid var(--cor009);
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 25px;
+    letter-spacing: 1px;
+    text-transform: uppercase; /*caixa alta*/
+    transition: transform 80ms ease-in; /*transição ao clicar*/
+}
+
+.voltar{
+    text-decoration: none;
+    color: var(--cor009);
+    height: 99%;
+    margin-right: 88%;
+}
+
+button:hover {
+    background: var(--cor010);
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#botao-cadastro{
+    border-color: var(--cor002);
+}
+
+#botao-alternar{
+    border-color: var(--cor002);
+}
+
+.btn{
+    width: 200px;
+}
+
+/* Ocultar elementos */
+.oculto {
+    display: none;
+}
+
+/* Efeito para alternar painéis */
+.modo-login .painel {
+    transform: translateX(100%);
+}
+
+.modo-login .mensagem {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+.modo-login .formulario {
+    left: 0;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        flex-direction: column;
+        height: auto;
+        transition: transform 0.6s ease-in;
+    }
+
+
+    .painel {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .formulario {
+        width: 100%;
+        position: relative;
+        left: 0;
+        padding: 20px;
+        transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    }
+
+
+    .painel, .formulario {
+        width: 100%;
+        position: relative;
+        left: 0;
+        transform: none;
+    }
+
+    .modo-login .painel {
+        transform: none;
+    }
+
+    .modo-login .formulario {
+        left: 0;
+    }
+    .modo-login .painel-direito {
+        opacity: 1;
+        display: flex;
+    }
+    /* Esconder completamente o painel esquerdo no modo login */
+    .container.modo-login .painel {
+        display: none;
+    }
+
+    /* Ajustar o formulário para ocupar a tela inteira */
+    .container .formulario {
+        width: 100%;
+        transform: translateX(0);
+    }
+
+    .formulario form {
+        width: 90%;
+    }
+
+    .formulario input,
+    .formulario button {
+        max-width: 100%;
+}
+}
+
+@media (max-width: 350px) {
+    /* Esconder completamente o painel esquerdo no modo login */
+    .container.modo-login .painel {
+        display: none;
+    }
+
+    h2{
+        font-size: 23px;
+    }
+
+    /* Ajustar o formulário para ocupar a tela inteira */
+    .container .formulario {
+        width: 100%;
+        transform: translateX(0);
+    }
+
+}

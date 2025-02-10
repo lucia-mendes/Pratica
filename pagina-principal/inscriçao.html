@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Inscrição</title>
+    <link rel="stylesheet" href="inscricao.css">
+    <script src="inscricao.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header class="logotipo">
+            <img src="logotipo.jpg" alt="Logotipo da instituição" width="90px" class="img">
+            <h1> Colégio Nossa Senhora da Anunciação Vila-Sede</h1>
+            <h5>"Oração e Educação"</h5>
+        </header>
+
+                <div class="form-header">
+                    <div class="info">
+                        <p><label for="idata">Ano Lectivo</label><input type="date" name="data" id="idata" required></p>
+                        <p><label for="iclasse">Classe</label><input type="number" name="classe" id="iclasse" required> </p>
+                        <p> <label for="icurso">Curso</label><input type="text" name="Curso" id="icurso" required></p>
+                        <p><label for="ifoto">Envie sua foto aqui</label></p>
+                    </div>
+
+                    <div class="foto-container">
+                        <input type="file" name="ifoto" id="ifoto" accept="image/*" required>
+                         <img id="preview" src="" alt="Prévia da Foto">
+                    </div>
+                </div>               
+        <h3 class="ficha">FICHA DE INSCRIÇÃO</h3>
+        <div>
+            <fieldset>
+            <legend>DADOS PESSOAIS</legend>
+            <form action="inscricao.php" method="post" autocomplete="on"> <!--O autocomplete serve para preenchimento automatico dos campos-->
+                <p>
+                    <label for="inome">Nome completo do (a) Aluno (a):</label> <input type="text" name="nome" id="inome" required minlength="20" maxlength="55" size="50">
+                </p>
+                 <!--Required: significa obrigatório
+                 Minlenght e Maxlenght servem para dizer a
+                 quantidade maxima e minima de digitos
+                 Size para tamanho da caixa-->
+                <p>
+                    <label for="ipai">Filho (a) de: </label><input type="text" name="pai" id="ipai" required minlength="20" maxlength="55" size="50">
+                </p>
+                <p>
+                    <label for="imae">e de:</label> <input type="text" name="mãe" id="imae" required minlength="20" maxlength="55" size="50">
+                </p>
+                <p>
+                    <label for="inatu">Natural de:</label> <input type="text" name="natural" id="inatu" placeholder="Província" required>
+                </p>
+                <p>
+                    <label for="idataNasc">Nascido a: </label><input type="date" name="dataNascimento" id="idataNasc" required>
+                </p>
+                <p>
+                    <label for="ibilhete">Portador do B.I ou Cédula Pessoal nº</label><input type="number" name="bilhete" id="ibilhete" required minlength="12" maxlength="15" size="13" placeholder="Número do Bilhete">
+                </p>
+                <p>
+                    <label for="iarqui">passado pelo arquivo de identificação de:</label><input type="text" name="arquivo" id="iarqui" placeholder="Município" minlength="5" maxlength="15" required> aos <input type="date" name="data" id="iarqui" required>
+                </p>
+                <p>
+                    <label for="iresi">Residente em </label> <input type="text" name="residência" id="iresi" required placeholder="Província" minlength="3" maxlength="14">
+                </p>
+                <p>
+                    <label for="imuni">Município de</label> <input type="text" name="Município" id="imuni" required minlength="4" maxlength="20">
+                </p>
+                <p>
+                    <label for="irua">Rua</label> <input type="text" name="Rua" id="irua" required minlength="1" maxlength="20">
+                </p>
+                <p>
+                    <label for="itel">Telefone</label> <input type="tel" name="Telefone" id="itel" required minlength="9" maxlength="20" placeholder="Contacto">
+                </p>
+                <p>
+                    <label for="iclass">Tendo frequentado a </label> <input type="number" name="class" id="iclass" required minlength="1" maxlength="2"> <label for="iano">ª Classe, no Ano Lectivo</label> <input type="datetime" name="Ano" id="iano">
+                </p>
+                <p>
+                    <label for="inum">Sob nº</label> <input type="number" name="numero" id="inum" maxlength="3" required> <label for="iturm">Turma</label> <input type="datetime" name="turma" id="iturm" required>
+                </p>
+                <p>
+                    <label for="iestab">no estabelecimento de ensino</label> <input type="text" name="instituição" id="iestab" required maxlength="40" size="50">
+                </p>
+                <p>
+                    <label for="inscr">pretende inscrever-se na </label> <input type="number" name="Inscrição" id="inscr" required placeholder="Classe" maxlength="2">      <label for="icurs">ª Classe, no Curso de </label> <input type="text" name="curso" id="icurs">
+                </p>
+            </form>
+        </fieldset>    
+        </div>
+        
+        <div>
+            <fieldset>
+                <legend>DADOS DO ENCARREGADO</legend>
+                <form action="inscriçao.php" method="post" autocomplete="on">
+                    <p>
+                        <label for="inome">Nome do Encarregado (a) de Educação: </label> <input type="text" name="nome" id="inome" required minlength="20" maxlength="55" size="55">
+                    </p>
+                    <p>
+                        <label for="iprof">Profissão </label><input type="text" name="profissão" id="iprof" required minlength="10" maxlength="50" size="50">
+
+                        <label for="ite">Telefone</label> <input type="tel" name="Telefone" id="ite" required minlength="9" maxlength="20" placeholder="Contacto">
+                    </p>
+                    <p>
+                        <label for="iloc">Local de Trabalho</label> <input type="datetime" name="local" id="iloc" required minlength="10" maxlength="45" size="50">
+
+                        <label for="iresi">Residente em </label> <input type="text" name="residência" id="iresi" required placeholder="Província" minlength="3" maxlength="14">
+                    </p>
+                    <p>
+                        <label for="ibair">Bairro </label> <input type="datetime" name="bairro" id="ibair" required>
+
+                        <label for="irua">Rua</label> <input type="datetime" name="Rua" id="irua" required minlength="1" maxlength="20">
+                    </p>
+                    <p>
+                        <label for="inome">Outra pessoa a contactar </label> <input type="text" name="nome" id="inome" required minlength="20" maxlength="55" size="55">
+                    </p>
+                    <p>
+                        <label for="itel">Telefone</label> <input type="tel" name="Telefone" id="itel" required minlength="9" maxlength="20" placeholder="Contacto">
+
+                        <label for="imorad">Morada </label> <input type="text" name="Morada" id="imorad" required minlength="3" maxlength="14">
+                    </p>
+            </fieldset>
+        </div>
+        <div>
+            <fieldset>
+                <Legend>DADOS CLÍNICOS</Legend>
+                <p>
+                    <label for="ialer">Sofre de alguma alergia?</label> <input type="text" name="alergia" id="ialer" required maxlength="80" size="65">
+                </p>
+                <p>
+                    <label for="indic">Existe alguma indicação médica ou contra indicação?</label> <input type="text" name="indicação" id="indic" required maxlength="100" size="65">
+                </p>
+                <p>
+                    <label for="ihosp">Nome da Instituição particular de Saúde ou do Hospital Público</label> <input type="text" name="hospital" id="ihosp" required maxlength="50" size="65">
+                </p>
+                <p>
+                    <label for="imed">Nome do médico da família</label> <input type="text" name="doutor" id="imed" required maxlength="50" size="55">      <label for="itel">,telefone</label> <input type="tel" name="Telefone" id="itel" required minlength="9" maxlength="20" placeholder="Contacto">
+                </p>
+                <p>
+                    Tem algum problema respiratório ou teve desmaios na Escola anterior?
+                    <label for="isim">Sim</label> <input type="checkbox" name="escolha" id="isim">
+                    <label for="inao">Não</label> <input type="checkbox" name="escolha" id="inao">
+                </p>
+            </fieldset>
+        </div>
+
+        <div>
+            <fieldset class="relig">
+                <legend>DADOS RELIGIOSOS</legend>
+                <P>
+                    <strong>
+                        <P>Católico?</P>
+                        <label for="isi">Sim</label> <input type="checkbox" name="escolh" id="isi">
+                        <label for="ina">Não</label> <input type="checkbox" name="escolh" id="ina">
+                        <P>Que Sacramento tem?</P>
+                        <label for="ibap">Baptismo</label> <input type="checkbox" name="Baptismo" id="ibap">
+                        <label for="icom">1ª Comunhão</label> <input type="checkbox" name="Comunhão" id="icom">
+                    </strong>
+                </P>
+            </fieldset>
+        </div>
+        <p>
+            <label for="icenp">CEPNSA VILA DE VIANA, aos</label> <input type="date" name="CEPNSA" id="icenp" required>
+        </p>
+        <p>
+            <label for="ienca">O Encarregado de Educação</label> <input type="text" name="Encarregado" id="ienca" required maxlength="25">
+            <br> Pai
+        </p>
+        <p>
+            <label for="ienca">O Encarregado de Educação</label> <input type="text" name="Encarregado" id="ienca" required maxlength="25"> <br> Mãe
+        </p>
+        <p>
+            <label for="ienca"><strong>A Secretaria</strong></label> <input type="text" name="Encarregado" id="ienca" required maxlength="25">
+        </p>
+        <p><button type="submit">Enviar Inscrição</button></p> 
+        </form>
+    </div>
+</body>
+</html>

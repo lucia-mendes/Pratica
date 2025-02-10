@@ -1,0 +1,208 @@
+:root {
+    --cor-fundo: #eee;
+    --cor-texto: #333;
+    --cor-titulo: #ff4b2b;
+    --cor-tabela: #fff;
+    --cor-borda: rgba(0, 0, 0, 0.7);
+    --cor-sombra: rgba(0, 0, 0, 0.5);
+    --cor-destaque: #ff445c;
+    --cor-hover: #f7d9db;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: var(--cor-fundo);
+    text-align: center;
+    color: var(--cor-texto);
+}
+
+/* Botão de voltar fixo no canto superior esquerdo */
+.voltar {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    padding: 8px 12px;
+    background-color: var(--cor-destaque);
+    color: var(--cor-tabela);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    box-shadow: 0 8px 16px var(--cor-sombra);
+}
+
+.voltar:hover {
+    background-color: var(--cor-titulo);
+    transform: scale(1.1); 
+}
+
+/* Botão de avançar*/
+.avançar {
+    position: fixed; /* Mantém o botão fixo na tela ao rolar a página */
+    bottom: 15px;
+    right: 15px; 
+    padding: 8px 12px;
+    background-color: var(--cor-destaque);
+    color: var(--cor-tabela);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s ease-in-out;
+    box-shadow: 0 12px 20px var(--cor-sombra);
+}
+
+/* Efeito de hover */
+.avançar:hover {
+    background-color: var(--cor-titulo);
+    transform: scale(1.1); /* Efeito de leve aumento ao passar o mouse */
+}
+
+/* Títulos */
+h1 {
+    color: var(--cor-titulo);
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: bold;
+    border-left: 4px solid var(--cor-destaque);
+    padding-left: 8px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+h5 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Organização do conteúdo em três colunas */
+.conteudo {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 20px auto;
+    text-align: justify;
+    gap: 25px; /* Aumentei o espaçamento entre as divs */
+}
+
+/* Divs das colunas */
+.esquerda, .meio, .direita {
+    width: 30%;
+    background-color: var(--cor-tabela);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--cor-sombra);
+    transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+
+/* Efeito hover aprimorado */
+.esquerda:hover, .meio:hover, .direita:hover {
+    transform: scale(1.08); /* Agora aumenta um pouco mais */
+    background-color: var(--cor-hover);
+    box-shadow: 0 6px 12px var(--cor-sombra);
+}
+
+/* Ajuste do texto */
+p {
+    text-align: justify;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Listas */
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* Estilização da tabela */
+.tabela-container {
+    overflow-x: auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    width: 90%;
+    max-width: 800px;
+    border-collapse: collapse;
+    background-color: var(--cor-tabela);
+    box-shadow: 0 8px 16px var(--cor-sombra);
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--cor-borda);
+}
+
+/* Cabeçalho da tabela */
+thead {
+    background: linear-gradient(135deg, var(--cor-titulo), var(--cor-destaque));
+}
+
+th {
+    color: var(--cor-tabela);
+    font-size: 16px;
+    padding: 12px;
+    border: 1px solid var(--cor-borda);
+}
+
+/* Células da tabela */
+td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid var(--cor-borda);
+    font-size: 14px;
+}
+
+/* Linhas alternadas */
+tbody tr:nth-child(odd) {
+    background-color: var(--cor-fundo);
+}
+
+tbody tr:hover {
+    background-color: var(--cor-destaque);
+    color: var(--cor-tabela);
+    transition: 0.3s;
+}
+
+/* Melhorando a Responsividade */
+@media (max-width: 768px) {
+    .conteudo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .esquerda, .meio, .direita {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    table {
+        width: 95%;
+    }
+}
+
+@media (max-width: 320px) {
+    body {
+        padding: 10px;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+}

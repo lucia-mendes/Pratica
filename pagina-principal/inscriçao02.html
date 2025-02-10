@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <h1>Teste de formulario</h1>
+    <form action="inscriçao.php" method="post" autocomplete="on">
+        <p>
+            <label for="isua">Usuário: </label>
+            <input type="text" name="usuario" id="isua" required minlength="10" maxlength="70" size="40" placeholder="Nome Completo" autocomplete="username">
+             <!--Required: significa obrigatório
+             Minlenght e Maxlenght servem para dizer a quantidade maxima e minima de digitos
+             Size para tamanho da caixa-->
+        </p>
+        <p>
+            <label for="isen">Senha</label>
+            <input type="password" name="senha" id="isen" required minlength="8">
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar"> <!--Botão para apagar as informações postas no formulario-->
+        </p>
+    </form>
+</body>
+</html>

@@ -70,6 +70,7 @@ header .menu-desktop nav ul{
 header .menu-desktop nav ul li{
     display: inline-block;
     margin: 0 35px;
+    font-weight: bold;
 }
 header .menu-desktop nav ul li a{
     color: black;
@@ -84,7 +85,7 @@ header .menu-desktop nav ul li a:hover{
 }
 
 header .btn-login button{
-    width: 80px;
+    width: 100px;
     height: 50px;
     font-size: 15px;
     background-color: transparent;
@@ -95,13 +96,13 @@ header .btn-login button{
 header .btn-login button:hover{
     background-color: #fff;
     color: black;
-    
 }
 
  header .btn-cadastro button{
-    width: 90px;
+    font-weight: 500;
+    width: 130px;
     height: 50px;
-    font-size: 15px;
+    font-size: 16px;
     background-color: transparent;
     border: 1px solid white;
     cursor: pointer;

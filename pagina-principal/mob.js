@@ -23,3 +23,16 @@ menuLinks.forEach(link => {
         toggleMenu(); // Fecha o menu
     });
 });
+
+menuLinks.forEach(link => {
+    link.addEventListener("click", (event) => {
+        let href = link.getAttribute("href"); // Obtém o destino do link
+        if (href && href !== "#") {
+            event.preventDefault(); // Impede a navegação imediata
+            setTimeout(() => {
+                window.location.href = href; // Redireciona após um curto intervalo
+            }, 300); // 300ms para dar tempo da animação do menu terminar
+        }
+        toggleMenu();
+    });
+});

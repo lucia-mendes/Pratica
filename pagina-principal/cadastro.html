@@ -26,7 +26,7 @@
         <div class="formulario">
           <!--Botão para voltar para a Página Principal-->
         <a href="./index.html" target="_self" rel="prev" class="voltar"> &larr; Voltar</a>
-            <form id="form-cadastro">
+            <form id="form-cadastro" autocomplete="on" method="post">
                 <h2>Cadastro</h2>
                  <!--Links dos icones das redes sociais-->
                  <div class="RedesSociais">
@@ -45,12 +45,12 @@
              <p class="descriçao">Ou use o seu e-mail para se cadastrar</p>
                 <input type="text" placeholder="Nome de usuário" required>
                 <input type="email" placeholder="E-mail" required>
-                <input type="password" placeholder="Senha" required>
+                <input type="password" placeholder="Senha" required minlength="8" maxlength="14">
                 <button type="submit" class="btn">Cadastrar</button>
             </form>
             
 
-            <form id="form-login" class="oculto">
+            <form id="form-login" class="oculto" autocomplete="on" method="post">
                 <h2>Login</h2>
                  <!--Links dos icones das redes sociais-->
                  <div class="RedesSociais">
@@ -68,7 +68,7 @@
                 </div>
              <p class="descriçao">Ou use o seu e-mail para se cadastrar</p>
                 <input type="text" placeholder="Nome de usuário" required>
-                <input type="password" placeholder="Senha" required>
+                <input type="password" placeholder="Senha" required minlength="8" maxlength="14">
                 <button type="submit" class="btn">Entrar</button>
             </form>
         </div>

@@ -221,6 +221,27 @@ input[type="checkbox"] {
     cursor: pointer;
 }
 
+/* Botão de voltar  no canto superior esquerdo */
+.voltar {
+    top: 15px;
+    left: 15px;
+    padding: 8px 12px;
+    background-color: var(--cor010);
+    color: var(--cor002);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    box-shadow: 0 8px 16px var(--cor004);
+}
+
+.voltar:hover {
+    padding: 11px;
+    background-color: var(--cor008);
+    transform: scale(1.1); 
+}
+
+
 @media screen and (max-width: 600px) {
     .container {
         width: 100%;

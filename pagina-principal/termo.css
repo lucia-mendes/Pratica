@@ -1,0 +1,59 @@
+/* Definição das cores */
+:root {
+    --cor001: #333;
+    --cor002: #fff;
+    --cor003: #ddd;
+    --cor004: #00000080;
+    --cor006: #00000033;
+    --cor007: #eee;
+    --cor008: #ff445c;
+    --cor009: #ff4b2b;
+    --cor010: #ff416c;
+}
+
+/* Configurações Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilização geral do corpo */
+body {
+    background-color: var(--cor007);
+    color: var(--cor001);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Contêiner principal */
+.container {
+    width: 90%;
+    max-width: 900px;
+    background-color: var(--cor002);
+    padding: 20px;
+    box-shadow: 0px 4px 8px var(--cor006);
+    border-radius: 10px;
+}
+
+/* Botão de envio com degradê */
+button {
+    background: linear-gradient(45deg, var(--cor009), var(--cor010), var(--cor008));
+    color: var(--cor002);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+button:hover {
+    filter: brightness(1.1);
+}

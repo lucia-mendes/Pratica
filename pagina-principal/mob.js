@@ -17,13 +17,6 @@ function toggleMenu() {
     body.classList.toggle('no-overflow');
 }
 
-// Fecha o menu ao clicar em um link e rola para a seção
-menuLinks.forEach(link => {
-    link.addEventListener("click", () => {
-        toggleMenu(); // Fecha o menu
-    });
-});
-
 menuLinks.forEach(link => {
     link.addEventListener("click", (event) => {
         let href = link.getAttribute("href"); // Obtém o destino do link

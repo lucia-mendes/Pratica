@@ -17,9 +17,9 @@
 
                 <div class="form-header">
                     <div class="info">
-                        <p><label for="idata">Ano Lectivo</label><input type="date" name="data" id="idata" required></p>
+                        <p><label for="idata">Ano Lectivo</label><input type="text" name="data" id="idata" required placeholder="2025/2026"></p>
                         <p><label for="iclasse">Classe</label><input type="number" name="classe" id="iclasse" required> </p>
-                        <p> <label for="icurso">Curso</label><input type="text" name="Curso" id="icurso" required></p>
+                        <p> <label for="icurso">Curso</label><input type="text" name="Curso" id="icurso" minlength="24" maxlength="33"></p>
                     </div>
 
                     <div class="foto-container">
@@ -34,16 +34,16 @@
             <legend>DADOS PESSOAIS</legend>
             <form action="inscricao.php" method="post" autocomplete="on"> <!--O autocomplete serve para preenchimento automatico dos campos-->
                 <p>
-                    <label for="inome">Nome completo do (a) Aluno (a):</label> <input type="text" name="nome" id="inome" required minlength="20" maxlength="55" size="50">
+                    <label for="inome">Nome completo do (a) Aluno (a):</label> <input type="text" name="nome" id="inome" required minlength="20" maxlength="55">
                 </p>
                  <!--Required: significa obrigatório
                  Minlenght e Maxlenght servem para dizer a quantidade maxima e minima de digitos
                  Size para tamanho da caixa-->
                 <p>
-                    <label for="ipai">Filho (a) de: </label><input type="text" name="pai" id="ipai" required minlength="20" maxlength="55" size="50">
+                    <label for="ipai">Filho (a) de: </label><input type="text" name="pai" id="ipai" minlength="15" maxlength="55">
                 </p>
                 <p>
-                    <label for="imae">e de:</label> <input type="text" name="mãe" id="imae" required minlength="20" maxlength="55" size="50">
+                    <label for="imae">e de:</label> <input type="text" name="mãe" id="imae" minlength="15" maxlength="55">
                 </p>
                 <div class="linha-inputs">
                     <p>
@@ -59,7 +59,7 @@
                 </p>
                 <div class="linha-inputs">
                     <p>
-                        <label for="iarqui">passado pelo arquivo de identificação de:</label><input type="text" name="arquivo" id="iarqui" placeholder="Município" minlength="5" maxlength="15" required>
+                        <label for="iarqui">passado pelo arquivo de identificação de:</label><input type="text" name="arquivo" id="iarqui" placeholder="Município" minlength="5" maxlength="15">
                     </p>
 
                     <p>
@@ -86,20 +86,20 @@
                 </div>
                 <div class="linha-inputs">
                     <p>
-                        <label for="iclass">Tendo frequentado a </label> <input type="number" name="class" id="iclass" required minlength="1" maxlength="2">
+                        <label for="iclass">Tendo frequentado a </label> <input type="number" name="class" id="iclass" required minlength="1" maxlength="10" placeholder="Classe">
                     </p>
 
                     <p>
-                        <label for="iano">ª Classe, no Ano Lectivo</label> <input type="text" name="Ano" id="iano">
+                        <label for="iano"> No Ano Lectivo</label> <input type="text" name="Ano" id="iano" required>
                     </p>
                 </div>
                 <div class="linha-inputs">
                     <p>
-                        <label for="inum">Sob nº</label> <input type="number" name="numero" id="inum" maxlength="3" required>
+                        <label for="inum">Sob nº</label> <input type="number" name="numero" id="inum" maxlength="3">
                     </p>
 
                     <p>
-                        <label for="iturm">Turma</label> <input type="text" name="turma" id="iturm" required>
+                        <label for="iturm">Turma</label> <input type="text" name="turma" id="iturm">
                     </p>
                     
                     <p>
@@ -108,11 +108,11 @@
                 </div>
                 <div class="linha-inputs">
                     <p>
-                        <label for="inscr">Pretende inscrever-se na </label> <input type="number" name="Inscrição" id="inscr" required placeholder="Classe" maxlength="2">
+                        <label for="inscr">Pretende inscrever-se na </label> <input type="number" name="Inscrição" id="inscr" required placeholder="Classe" maxlength="10">
                     </p>
 
                     <p>
-                        <label for="icurs">ª Classe, no Curso de </label> <input type="text" name="curso" id="icurs">
+                        <label for="icurs">No Curso de </label> <input type="text" name="curso" id="icurs">
                     </p>
                 </div>
             </form>
@@ -124,11 +124,11 @@
                 <legend>DADOS DO ENCARREGADO</legend>
                 <form action="inscriçao.php" method="post" autocomplete="on">
                     <p>
-                        <label for="inome">Nome do Encarregado (a) de Educação: </label> <input type="text" name="nome" id="inome" required minlength="20" maxlength="55" size="55">
+                        <label for="inome">Nome do Encarregado (a) de Educação: </label> <input type="text" name="nome" id="inome" required minlength="20" maxlength="55" size="55" placeholder="Nome Completo">
                     </p>
                     <div class="linha-inputs">
                         <p>
-                            <label for="iprof">Profissão </label><input type="text" name="profissão" id="iprof" required minlength="10" maxlength="50" size="50">
+                            <label for="iprof">Profissão </label><input type="text" name="profissão" id="iprof" required minlength="5" maxlength="50" size="50">
                         </p>
 
                         <p>    
@@ -155,7 +155,7 @@
                         </p>
                     </div>
                     <p>
-                        <label for="inome">Outra pessoa a contactar </label> <input type="text" name="nome" id="inome" required minlength="20" maxlength="55" size="55">
+                        <label for="inome">Outra pessoa a contactar </label> <input type="text" name="nome" id="inome" required minlength="20" maxlength="55" size="55" placeholder="Nome Completo">
                     </p>
                     <div class="linha-inputs">
                         <p>
@@ -163,7 +163,7 @@
                         </p>
 
                         <p>
-                            <label for="imorad">Morada </label> <input type="text" name="Morada" id="imorad" required minlength="3" maxlength="14">
+                            <label for="imorad">Morada </label> <input type="text" name="Morada" id="imorad" required minlength="3" maxlength="24">
                         </p>
                     </div>
             </fieldset>
